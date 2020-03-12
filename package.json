@@ -1,0 +1,141 @@
+{
+  "name": "@d2-projects/d2-advance",
+  "version": "1.19.14",
+  "private": true,
+  "description": "Advanced, colourful front-end integration practice. be inspired by D2Admin :)",
+  "author": {
+    "name": "CNine",
+    "email": "cnine229@gmail.com",
+    "url": "https://github.com/Aysnine"
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint",
+    "inspect": "vue-cli-service inspect",
+    "commit": "git-cz",
+    "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'",
+    "lint:strict": "vue-cli-service lint --no-fix --max-warnings=0"
+  },
+  "cdnDependencies": [
+    {
+      "group": 1,
+      "name": "normalize.css",
+      "css": "https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
+    },
+    {
+      "group": 1,
+      "name": "nprogress/nprogress.css",
+      "css": "https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css"
+    },
+    {
+      "group": 1,
+      "name": "nprogress",
+      "library": "NProgress",
+      "js": "https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"
+    },
+    {
+      "group": 1,
+      "name": "vue",
+      "library": "Vue",
+      "js": "https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js",
+      "js.dev": "https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"
+    },
+    {
+      "group": 1,
+      "name": "vue-i18n",
+      "library": "VueI18n",
+      "js": "https://cdn.jsdelivr.net/npm/vue-i18n@8.15.4/dist/vue-i18n.min.js",
+      "js.dev": "https://cdn.jsdelivr.net/npm/vue-i18n@8.15.4/dist/vue-i18n.js"
+    },
+    {
+      "group": 1,
+      "name": "vue-router",
+      "library": "VueRouter",
+      "js": "https://cdn.jsdelivr.net/npm/vue-router@3.1.6/dist/vue-router.min.js",
+      "js.dev": "https://cdn.jsdelivr.net/npm/vue-router@3.1.6/dist/vue-router.js"
+    },
+    {
+      "group": 1,
+      "name": "vuex",
+      "library": "Vuex",
+      "js": "https://cdn.jsdelivr.net/npm/vuex@3.1.2/dist/vuex.min.js",
+      "js.dev": "https://cdn.jsdelivr.net/npm/vuex@3.1.2/dist/vuex.js"
+    },
+    {
+      "group": 1,
+      "name": "axios",
+      "library": "axios",
+      "js": "https://cdn.jsdelivr.net/npm/axios@0.19.2/dist/axios.min.js",
+      "js.dev": "https://cdn.jsdelivr.net/npm/axios@0.19.2/dist/axios.js"
+    },
+    {
+      "name": "element-ui",
+      "library": "ELEMENT",
+      "js": "https://cdn.jsdelivr.net/npm/element-ui@2.13.0/lib/index.js"
+    },
+    {
+      "name": "element-ui/lib/theme-chalk/index.css",
+      "css": "https://cdn.jsdelivr.net/npm/element-ui@2.13.0/lib/theme-chalk/index.css"
+    }
+  ],
+  "dependencies": {
+    "axios": "^0.19.2",
+    "better-scroll": "^1.15.2",
+    "core-js": "^3.6.4",
+    "element-ui": "^2.13.0",
+    "epic-spinners": "^1.1.0",
+    "lodash": "^4.17.15",
+    "lowdb": "^1.0.0",
+    "normalize.css": "^8.0.1",
+    "nprogress": "^0.2.0",
+    "register-service-worker": "^1.6.2",
+    "vue": "^2.6.10",
+    "vue-i18n": "^8.15.4",
+    "vue-router": "^3.1.6",
+    "vuex": "^3.1.2",
+    "vuex-map-fields": "^1.4.0"
+  },
+  "devDependencies": {
+    "@d2-projects/vue-filename-injector": "^1.1.1",
+    "@vue/cli-plugin-babel": "^4.2.3",
+    "@vue/cli-plugin-eslint": "^4.2.3",
+    "@vue/cli-plugin-router": "^4.2.3",
+    "@vue/cli-plugin-unit-jest": "^4.2.3",
+    "@vue/cli-plugin-vuex": "^4.2.3",
+    "@vue/cli-service": "^4.2.3",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/test-utils": "1.0.0-beta.32",
+    "babel-eslint": "^10.1.0",
+    "compression-webpack-plugin": "^3.1.0",
+    "cz-conventional-changelog": "3.1.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-vue": "^6.2.1",
+    "node-version-matches": "^2.0.1",
+    "prettier": "^1.19.1",
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2",
+    "vue-cli-plugin-i18n": "^0.6.1",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.42.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "gitHooks": {
+    "pre-push": "yarn lint:strict && yarn test:unit"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/d2-projects/d2-advance.git"
+  }
+}
